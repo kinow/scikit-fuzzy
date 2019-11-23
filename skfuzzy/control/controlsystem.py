@@ -637,7 +637,7 @@ class CrispValueCalculator(object):
 
         new_universe = np.union1d(self.var.universe, new_values)
 
-        # Initilize membership
+        # Initialize membership
         output_mf = np.zeros_like(new_universe, dtype=np.float64)
 
         # Build output membership function
@@ -675,7 +675,7 @@ class CrispValueCalculator(object):
 
         new_universe = np.union1d(self.var.universe, new_values)
 
-        # Initilize membership
+        # Initialize membership
         output_mf = np.zeros_like(new_universe, dtype=np.float64)
 
         # Build output membership function
@@ -756,7 +756,7 @@ class RuleOrderGenerator(object):
                 self.all_rules.append(node)
 
     def _process_rules(self, rules):
-        # Recursive funcion to process rules in the correct firing order
+        # Recursive function to process rules in the correct firing order
         len_rules = len(rules)
         skipped_rules = []
         while len(rules) > 0:
@@ -766,7 +766,7 @@ class RuleOrderGenerator(object):
                 # Add rule to calced graph
                 self.calced_graph = nx.compose(self.calced_graph, rule.graph)
             else:
-                # We have not calculated the predecsors for this rule yet.
+                # We have not calculated the predecessors for this rule yet.
                 #  Skip it for now
                 skipped_rules.append(rule)
 

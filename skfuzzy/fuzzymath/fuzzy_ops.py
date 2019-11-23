@@ -611,7 +611,7 @@ def interp_universe(x, xmf, y):
 
     # The above method is fast, but duplicates point values where
     # y == peak of a membership function.  Ducking briefly into a set
-    # elimniates this.  Benchmarked multiple ways; this is by far the fastest.
+    # eliminates this.  Benchmarked multiple ways; this is by far the fastest.
     # Speed penalty approximately 10%, worth it.
     return [n for n in set(xx.tolist())]
 
